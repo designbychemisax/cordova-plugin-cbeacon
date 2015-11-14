@@ -8,7 +8,7 @@ It is on GitHub for testing purposes.
 
 Since CoreLocation permissions changed a bit in iOS 8, this plugin only supports iOS 8 +
 
-#Instalation
+#Installation
 
 To install:
 
