@@ -19,7 +19,7 @@ To install:
 ```cordova prepare```
 
 
-This plugin was created in Swift, so Swift Bridging Headers must be configured. 
+__Iportant:__ This plugin was created in Swift, so __Swift Bridging Header__ must be specified. 
 
 On XCode go to:
 
