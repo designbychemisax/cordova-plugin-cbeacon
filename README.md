@@ -6,15 +6,24 @@ It is on GitHub for testing purposes.
 
 #Instalation
 
-```cordova plugin insstall ```
+To install:
 
-After preparing ios platform, you must add the bridging header for swift
+```cordova plugin add https://github.com/chemisax/cbeacon.git```
 
-in XCode:
+```cordova platform add ios``` if not already added.
+
+```cordova prepare```
+
+
+This plugin was created in Swift, so Swift Bridging Headers must be configured. 
+
+On XCode go to:
 
 Build Settings > Objective-C Bridging Header : ```(Project Name)/Plugins/Cbeacon-Bridging-Header.h```
 
 Build Settings > Embedded Content Contains Swift Code: ```YES```
 
 Build Settings > Runpath Search Paths: ```@executable_path/Frameworks```
+
+Tested on XCode 7.0.1
 
