@@ -1,0 +1,13 @@
+{
+  "name": "cordova-plugin-cbeacon",
+  "version": "0.0.1",
+  "description": "Cordova Swift iBeacon",
+  "cordova": {
+    "id": "cordova-plugin-cbeacon",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "author": "José María Campaña",
+  "license": "MIT"
+}

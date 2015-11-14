@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"  
+        id="cordova-plugin-cbeacon"  
+        version="0.1">  
+  
+  <name>Cbeacon</name>  
+  <description>This plugin just echoes uppercased string.</description>  
+  
+  <js-module src="www/cbeacon.js">  
+    <clobbers target="window.Cbeacon" />  
+  </js-module>  
+  
+  <!-- iOS -->  
+  <platform name="ios">  
+    <config-file target="config.xml" parent="/*">  
+      <feature name="Cbeacon">  
+        <param name="ios-package" value="Cbeacon" />  
+      </feature>  
+    </config-file>
+    <header-file src="src/ios/Cbeacon-Bridging-Header.h" />  
+    <source-file src="src/ios/Cbeacon.swift" />  
+  </platform>  
+  
+</plugin>
