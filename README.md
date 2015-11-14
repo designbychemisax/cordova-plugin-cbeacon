@@ -27,3 +27,8 @@ Build Settings > Runpath Search Paths: ```@executable_path/Frameworks```
 
 Tested on XCode 7.0.1
 
+#Usage
+
+(future usage)
+
+
