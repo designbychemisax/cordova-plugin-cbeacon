@@ -3,9 +3,12 @@
         id="cordova-plugin-cbeacon"  
         version="0.1">  
   
-  <name>Cbeacon</name>  
-  <description>This plugin just echoes uppercased string.</description>  
-  
+  <name>Cbeacon</name>   
+  <author>José María Campaña Rojas</author>
+  <license>MIT</license>
+  <repo>https://github.com/chemisax/cbeacon.git</repo>
+  <issue>https://github.com/chemisax/cbeacon/issues</issue>
+
   <js-module src="www/cbeacon.js">  
     <clobbers target="window.Cbeacon" />  
   </js-module>  
