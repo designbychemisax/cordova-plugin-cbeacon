@@ -10,8 +10,6 @@ Since CoreLocation permissions changed a bit in iOS 8, this plugin only supports
 
 #Installation
 
-To install:
-
 Add to config.xml in ```<platform name="ios">```:
 
 ```XML
