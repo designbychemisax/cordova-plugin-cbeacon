@@ -1,6 +1,5 @@
 //
 //  Cbeacon.swift
-//  HelloCordova
 //
 //  Created by José María Campaña Rojas on 14/11/15.
 //
