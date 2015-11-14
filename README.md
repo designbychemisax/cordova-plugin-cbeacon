@@ -12,7 +12,7 @@ Since CoreLocation permissions changed a bit in iOS 8, this plugin only supports
 
 To install:
 
-```cordova plugin add https://github.com/chemisax/cbeacon.git```
+```cordova plugin add https://github.com/chemisax/cordova-plugin-cbeacon.git```
 
 ```cordova platform add ios``` if not already added.
 
