@@ -2,12 +2,20 @@
   
 var exec = require('cordova/exec');  
   
-var CBeacon = {  
+var cBeacon = {  
   
-  echo: function(sendMsg, onSuccess, onFail) {  
-    return exec(onSuccess, onFail, 'Cbeacon', 'echo', []);  
-  }  
+  authorizationStatusWhenInUse: function(onSuccess) {  
+    return exec(onSuccess, 'CBeacon', 'authorizationStatusWhenInUse', []);  
+  },
+
+  requestWhenInUseAuthorization: function() {  
+    return exec(onSuccess, onFail, 'CBeacon', 'requestWhenInUseAuthorization', []);  
+  },
+
+  startRangingBeaconsInRegion: function(UUID, identifier, didRangeBeacons) {  
+    return exec(onSuccess, onFail, 'CBeacon', 'requestWhenInUseAuthorization', []);  
+  }
   
 };  
   
-module.exports = CBeacon;  
+module.exports = cBeacon;

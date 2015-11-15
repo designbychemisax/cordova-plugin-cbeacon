@@ -3,25 +3,25 @@
         id="cordova-plugin-cbeacon"  
         version="0.1">  
   
-  <name>Cbeacon</name>   
+  <name>cBeacon</name>   
   <author>José María Campaña Rojas</author>
   <license>MIT</license>
   <repo>https://github.com/chemisax/cbeacon.git</repo>
   <issue>https://github.com/chemisax/cbeacon/issues</issue>
 
   <js-module src="www/cbeacon.js">  
-    <clobbers target="window.Cbeacon" />  
+    <clobbers target="window.cBeacon" />  
   </js-module>  
   
   <!-- iOS -->  
   <platform name="ios">  
     <config-file target="config.xml" parent="/*">  
-      <feature name="Cbeacon">  
-        <param name="ios-package" value="Cbeacon" />  
+      <feature name="CBeacon">  
+        <param name="ios-package" value="CBeacon" />  
       </feature>  
     </config-file>
-    <header-file src="src/ios/Cbeacon-Bridging-Header.h" />  
-    <source-file src="src/ios/Cbeacon.swift" />  
+    <header-file src="src/ios/CBeacon-Bridging-Header.h" />  
+    <source-file src="src/ios/CBeacon.swift" />  
   </platform>  
   
 </plugin>
