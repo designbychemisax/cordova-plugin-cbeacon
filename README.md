@@ -1,4 +1,4 @@
-#Warning
+#Disclaimer
 
 This plugin does not work yet!
 
@@ -39,6 +39,17 @@ Tested on XCode 7.0.1
 
 #Usage
 
-(future usage)
+```Javascript
+cBeacon.authorizationStatusWhenInUse(function (status) { 
+            console.log("status: "+status);
 
+            if (!status) {
+                cBeacon.requestWhenInUseAuthorization();
+            } 
 
+            cBeacon.startRangingBeaconsInRegion("36F800E0-DABA-4980-AAF9-0098F9E3E502", "aBeacon", function (beacons) {
+                console.log("beacon found");
+            });
+
+        });
+```
