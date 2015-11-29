@@ -1,4 +1,4 @@
-#Warning
+#Disclaimer
 
 This plugin does not work yet!
 
@@ -27,11 +27,13 @@ __Iportant:__ This plugin was created in Swift, so __Swift Bridging Header__ mus
 
 On XCode go to:
 
-Build Settings > Objective-C Bridging Header : ```(Project Name)/Plugins/cordova-plugin-cbeacon/Cbeacon-Bridging-Header.h```
+Build Settings > Objective-C Bridging Header : ```(Project Name)/Plugins/cordova-plugin-cbeacon/CBeacon-Bridging-Header.h```
 
 Build Settings > Embedded Content Contains Swift Code: ```YES```
 
 Build Settings > Runpath Search Paths: ```@executable_path/Frameworks```
+
+Add key ```NSLocationWhenInUseUsageDescription``` to ```info.plist``` with a message requesting permision for locaiton services.
 
 If a failed Build attempt was made before: Clean with cmd+Shift+K
 
@@ -39,6 +41,15 @@ Tested on XCode 7.0.1
 
 #Usage
 
-(future usage)
+```Javascript
+cBeacon.authorizationStatusWhenInUse(function (status) { 
+  if (!status) {
+    cBeacon.requestWhenInUseAuthorization();
+  } 
 
+  cBeacon.startRangingBeaconsInRegion("36F800E0-DABA-4980-AAF9-0098F9E3E502", "aBeacon", function (beacons) {
+    console.log("beacon found");
+  });
 
+});
+```
