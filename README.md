@@ -42,14 +42,5 @@ Tested on XCode 7.0.1
 #Usage
 
 ```Javascript
-cBeacon.authorizationStatusWhenInUse(function (status) { 
-  if (!status) {
-    cBeacon.requestWhenInUseAuthorization();
-  } 
 
-  cBeacon.startRangingBeaconsInRegion("36F800E0-DABA-4980-AAF9-0098F9E3E502", "aBeacon", function (beacons) {
-    console.log("beacon found");
-  });
-
-});
 ```
