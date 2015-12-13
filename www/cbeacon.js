@@ -1,7 +1,3 @@
-cordova.define("cordova-plugin-cbeacon.cbeacon", function(require, exports, module) { 'use strict';
-
-    var exec = require('cordova/exec');
-
     var cBeacon = {
 
         callbacks : {
@@ -51,4 +47,3 @@ cordova.define("cordova-plugin-cbeacon.cbeacon", function(require, exports, modu
     };
 
     module.exports = cBeacon;
-});
