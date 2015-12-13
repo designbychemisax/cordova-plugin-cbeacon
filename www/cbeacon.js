@@ -13,12 +13,21 @@ cordova.define("cordova-plugin-cbeacon.cbeacon", function(require, exports, modu
         emptyHandler : function () {},
 
         swiftAction : function (params) {
-            alert("received command from objective c");
+            if (params != null) {
+                if (params.command == "range") {
+                    var callbacks = this.callbacks["didRangeBeacons"];
+                    for (var i = 0; i < callbacks.length; i++) {
+                        callbacks[i].apply(this, [params]);
+                    }
+                }
+            }
         },
 
         connect: function() {
-            alert("connecting cBeacon");
-            return exec(this.swiftAction, this.errorHandler, 'CBeacon', 'register', []);
+            var plugin = this;
+            return exec(function (params) {
+                plugin.swiftAction.apply(plugin, [params]);
+            }, this.errorHandler, 'CBeacon', 'register', []);
         },
 
         on : function (event, callback) {
@@ -31,24 +40,12 @@ cordova.define("cordova-plugin-cbeacon.cbeacon", function(require, exports, modu
             return exec(callback, this.errorHandler, 'CBeacon', 'getBeaconStatus', []);
         },
 
-
         requestAuthorization: function() {
             return exec(this.emptyHandler, this.errorHandler, 'CBeacon', 'requestAuthorization', []);
         },
 
-        /**
-         * Old commands
-         * @param onSuccess
-         * @returns {*}
-         */
-        authorizationStatusWhenInUse: function(onSuccess) {
-            return exec(onSuccess, 'CBeacon', 'authorizationStatusWhenInUse', []);
-        },
-
-
-
-        startRangingBeaconsInRegion: function(UUID, identifier, didRangeBeacons) {
-            return exec(onSuccess, onFail, 'CBeacon', 'requestWhenInUseAuthorization', []);
+        startRangingBeaconsInRegion: function(UUID, identifier) {
+            return exec(this.emptyHandler, this.errorHandler, 'CBeacon', 'startRangingBeaconsInRegion', [UUID, identifier]);
         }
 
     };
