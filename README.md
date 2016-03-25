@@ -16,7 +16,7 @@ Add to config.xml in ```<platform name="ios">```:
 <preference name="deployment-target" value="8.0" />
 ```
 
-```cordova plugin add https://github.com/chemisax/cordova-plugin-cbeacon.git```
+```cordova plugin add https://github.com/designbychemisax/cordova-plugin-cbeacon.git```
 
 ```cordova platform add ios``` if not already added.
 
