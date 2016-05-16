@@ -4,11 +4,6 @@ cBeacon is a cordova plugin for detecting beacons in a simple way using javascri
 
 It was created using swift and javascript.
 
-#Disclaimer
-
-This plugin is experimental, I made it in one hour, the code is dirty, and it is still in development.
-Use at your own risk.
-
 #Supported OS
 
 - iOS 8+ 
@@ -80,6 +75,13 @@ cBeacon.getBeaconStatus(function (status) {
 
 #TODO
 - error handlers
+
+If you want to help to develop this plugin, please fork and send me plugin requests!
+
+#Disclaimer
+
+This plugin is experimental, I made it in one hour, the code is dirty, and it is still in development.
+Use at your own risk.
 
 #Licence
 
