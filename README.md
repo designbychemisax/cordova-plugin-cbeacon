@@ -76,7 +76,10 @@ cBeacon.getBeaconStatus(function (status) {
 #TODO
 - error handlers
 
-If you want to help to develop this plugin, please fork and send me plugin requests!
+If you want to help  develop or maintain this plugin, please fork and send me plugin requests!
+
+__current supporters:__
+This plugin is currently not being supported
 
 #Disclaimer
 
