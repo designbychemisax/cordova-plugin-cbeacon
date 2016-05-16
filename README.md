@@ -1,8 +1,12 @@
+#cBeacon
+
+cBeacon is a plugin for detecting beacons in a region using javascript.
+Created using swift and javascript.
+
 #Disclaimer
 
-This plugin does not work yet!
-
-It is on GitHub for testing purposes.
+This plugin is experimental, I made it in one hour, the code is dirty, and it is still in development.
+Use at your own risk.
 
 #Supported OS
 
@@ -43,4 +47,44 @@ Tested on XCode 7.0.1
 
 ```Javascript
 
+//Start the plugin
+cBeacon.connect();
+
+//Add event handler
+cBeacon.on("didRangeBeacons", function (params) {
+    if (params.beacons.length > 0) {
+        //do something
+    }
+});
+
+//Start Ranging
+cBeacon.getBeaconStatus(function (status) {
+
+  console.log("Location permission granted?", status.permission);
+  console.log("Bluetooth on?", status.bluetooth); 
+  
+  if (status.permission && status.bluetooth) {
+    //Start ranging beacons
+    cBeacon.startRangingBeaconsInRegion("AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE", "testBeacon");
+  } else {
+    //Request Location info permission
+    cBeacon.requestAuthorization();
+  }
+  
+});
+
 ```
+
+#Licence
+
+The MIT Licence
+
+Copyright (c) 2015 José María Campaña Rojas
+design by chemisax
+www.chemisax.com
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
