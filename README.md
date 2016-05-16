@@ -1,7 +1,8 @@
 #cBeacon
 
-cBeacon is a plugin for detecting beacons in a region using javascript.
-Created using swift and javascript.
+cBeacon is a cordova plugin for detecting beacons in a simple way using javascript.
+
+It was created using swift and javascript.
 
 #Disclaimer
 
