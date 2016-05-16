@@ -11,7 +11,9 @@ Use at your own risk.
 
 #Supported OS
 
-Since CoreLocation permissions changed a bit in iOS 8, this plugin only supports iOS 8 +
+- iOS 8+ 
+ 
+> Since CoreLocation permissions changed a bit in iOS 8, this plugin only supports iOS 8 +
 
 #Installation
 
@@ -75,6 +77,9 @@ cBeacon.getBeaconStatus(function (status) {
 });
 
 ```
+
+#TODO
+- error handlers
 
 #Licence
 
