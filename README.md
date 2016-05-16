@@ -79,7 +79,8 @@ cBeacon.getBeaconStatus(function (status) {
 If you want to help  develop or maintain this plugin, please fork and send me plugin requests!
 
 __current supporters:__
-This plugin is currently not being supported
+
+This plugin is not currently being supported by anyone.
 
 #Disclaimer
 
