@@ -1,4 +1,4 @@
-#cBeacon
+![cBeacon](https://cloud.githubusercontent.com/assets/5554982/15291440/df1d65fa-1bb8-11e6-886e-8a1fb2ff9650.jpg)
 
 cBeacon is a cordova plugin for detecting beacons in a simple way using javascript.
 
